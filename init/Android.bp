@@ -130,7 +130,7 @@ libinit_cc_defaults {
         "-DREBOOT_BOOTLOADER_ON_PANIC=0",
         "-DSHUTDOWN_ZERO_TIMEOUT=0",
         "-DWORLD_WRITABLE_KMSG=0",
-        "-DSPOOF_SAFETYNET=1",
+        "-DSPOOF_SAFETYNET=0",
         "-Wall",
         "-Werror",
         "-Wextra",
@@ -449,7 +449,7 @@ init_first_stage_cc_defaults {
         "-DSHUTDOWN_ZERO_TIMEOUT=0",
         "-DLOG_UEVENTS=0",
         "-DSEPOLICY_VERSION=30", // TODO(jiyong): externalize the version number
-        "-DSPOOF_SAFETYNET=1",
+        "-DSPOOF_SAFETYNET=0",
     ] + GLOBAL_HWASAN_OPTIONS,
 
     product_variables: {
